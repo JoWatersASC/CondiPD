@@ -1,21 +1,9 @@
 #ifndef CPD_H
 #define CPD_H
-#include<vector>
-#include<iostream>
+
 #include<map>
 #include<set>
-
-struct var{
-    std::string name;
-    std::vector<std::pair<std::string, float>> vals;
-
-    void print(std::ostream& out){
-        out << name << std::endl;
-        for(auto p : vals){
-            out << p.first << ": " << p.second << std::endl;
-        }
-    }
-};
+#include"var.h"
 
 class cpd{
     public:

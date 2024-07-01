@@ -95,7 +95,9 @@ void cpd::printCPD(){
         auto dependencies = distSet.first;
         std::string input = "P(";
         out << "P(";
+        
         for(auto str : dependencies){
+
             out << str << ",";
         }
         out << "\b) = " << distSet.second << std::endl;
