@@ -4,6 +4,8 @@
 #include<vector>
 #include<iostream>
 
+struct var;
+
 struct var{
     std::string name;
     std::vector<std::pair<std::string, float>> vals;
@@ -16,11 +18,11 @@ struct var{
     }
 };
 
-int getW(var v){
+inline int getW(var& v){
     if(v.vals.size() == 0) return 2;
     int max = 0;
     
-    for(auto val : vals){
+    for(auto val : v.vals){
         if(val.first.length() > max) max = val.first.length();
     }
 
